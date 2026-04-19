@@ -137,3 +137,4 @@ async def estimate_vo2max(data: VO2MaxRequest):
     elif vo2max >= 30: category, emoji = "Average", "👟"
     else: category, emoji = "Below Average", "🎯"
     return {"vo2max": round(vo2max, 1), "category": category, "emoji": emoji}
+#test
