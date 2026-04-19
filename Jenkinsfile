@@ -8,6 +8,12 @@ pipeline {
 
     stages {
 
+        stage('Get Code') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
